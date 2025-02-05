@@ -10,7 +10,7 @@ function App() {
   const squaresRef = useRef(squares);
   const width = 4;
 
-  const firstGenerateSquare = () => {
+  const createGame = () => {
     let x: number[] = Array(width * width).fill(0);
     addRandomTile(x);
     addRandomTile(x);
@@ -30,7 +30,7 @@ function App() {
   };
 
   useEffect(() => {
-    firstGenerateSquare();
+    createGame();
 
     // Add event listener for keydown
     window.addEventListener('keydown', handleKeyDown);
@@ -155,9 +155,11 @@ function App() {
   const checkForGameOver = (newSquares: number[]) => {
     if (newSquares.indexOf(2048) !== -1) {
       setIsWon(true);
+      window.removeEventListener('keydown', handleKeyDown);
     }
     if (newSquares.indexOf(0) === -1) {
       setIsGameOver(true);
+      window.removeEventListener('keydown', handleKeyDown);
     }
   };
 
