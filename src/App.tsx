@@ -3,6 +3,7 @@ import Info from './components/Info';
 
 import GameBoard from './components/GameBoard';
 import './App.css'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -14,10 +15,11 @@ function App() {
   }
 
   return (
-    <>
+    <div className='flex flex-col h-screen'>
       <Info score={score} />
       <GameBoard handleScore={handleScore} score={score} />
-    </>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,8 +1,21 @@
-# React + Vite
+# 2048 Game
+This is a simple 2048 game implemented in react. The game is played on a 4x4 grid with numbered tiles that slide when a player moves them using the arrow keys. The game is won when a tile with the number 2048 is created.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo
+![2048 Game](demo.gif)
 
-Currently, two official plugins are available:
+## How to play
+- Use the arrow keys to move the tiles in the desired direction.
+- When two tiles with the same number touch, they merge into one tile with the sum of the two numbers.
+- The game is won when a tile with the number 2048 is created.
+- The game is lost when the grid is full and there are no possible moves left.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to run
+- Clone the repository
+- Run `npm install` to install the dependencies
+- Run `npm run dev` to start the development server
+
+## Technologies used
+- React
+- Typescript
+- Vite

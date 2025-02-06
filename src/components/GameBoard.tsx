@@ -168,24 +168,24 @@ function GameBoard({ score, handleScore }:GameBoardProps) {
   };
 
   return (
-    <>
-    
-      <div className='board flex flex-wrap w-[456px] h-[456px] bg-[#BBADA0] rounded-[6px]'>
-        {
-          squares.map((val, index) => {
-            return <Square key={index} val={val} />
-          })
-        }
-      </div>
+    <div className='flex flex-1'>
+      <div className='flex flex-col'>
+        <div className='board flex flex-wrap w-[456px] h-[456px] bg-[#BBADA0] rounded-[6px]'>
+          {
+            squares.map((val, index) => {
+              return <Square key={index} val={val} />
+            })
+          }
+        </div>
 
-      <div className='text-center mt-4'>
-        {isGameOver ? 'Game Over' : ''}
+        <div className='text-center mt-4 font-bold text-4xl'>
+          {isGameOver ? 'Game Over' : ''}
+        </div>
+        <div className='text-center mt-4 font-bold text-4xl'>
+          {isWon ? 'You Won' : ''}
+        </div>
       </div>
-      <div className='text-center mt-4'>
-        {isWon ? 'You Won' : ''}
-      </div>
-     
-    </>
+    </div>
   );
 }
 
