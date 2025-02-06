@@ -19,3 +19,7 @@ This is a simple 2048 game implemented in react. The game is played on a 4x4 gri
 - React
 - Typescript
 - Vite
+- Tailwind CSS
+
+## Deployment
+The game is deployed on Netlify. You can play it [here](https://wimpy-2048.netlify.app/).
